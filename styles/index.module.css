@@ -1,0 +1,29 @@
+.backgroundPattern {
+  position: absolute;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.8;
+  background-image: radial-gradient(
+      var(--color-secondary) 0.5px,
+      transparent 0.5px
+    ),
+    radial-gradient(var(--color-secondary) 0.5px, transparent 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+/* 
+https://www.magicpattern.design/tools/css-backgrounds 
+https://dev.to/alexeagleson/how-to-create-a-dark-mode-component-in-react-3ibg
+
+*/
+
+.pageBody {
+  justify-content: center;
+  align-items: center;
+}
+
+.blueText {
+  color: var(--color-accent);
+}
