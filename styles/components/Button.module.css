@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  background-color: var(--color-accent);
+  border-radius: var(--size-standard-unit);
+  padding: var(--size-small-unit) var(--size-standard-unit);
+  border: hidden;
+  box-shadow: var(--shadow-box);
+  color: var(--color-primary);
+  transition: all 0.1s ease-in-out;
+  text-decoration-line: none;
+}
+
+.button:active {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  transform: scale(1.05);
+}
+
+#socialLink {
+  margin-right: var(--size-standard-unit);
+  margin-top: var(--size-standard-unit);
+}

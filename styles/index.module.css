@@ -1,29 +1,77 @@
-.backgroundPattern {
-  position: absolute;
-  z-index: -1;
-  height: 100vh;
-  width: 100vw;
-  opacity: 0.8;
-  background-image: radial-gradient(
-      var(--color-secondary) 0.5px,
-      transparent 0.5px
-    ),
-    radial-gradient(var(--color-secondary) 0.5px, transparent 0.5px);
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
-}
-
 /* 
 https://www.magicpattern.design/tools/css-backgrounds 
 https://dev.to/alexeagleson/how-to-create-a-dark-mode-component-in-react-3ibg
-
+https://css-tricks.com/updating-a-css-variable-with-javascript/
 */
 
 .pageBody {
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.blueText {
-  color: var(--color-accent);
+.heroBox {
+  display: flex;
+  align-items: center;
+}
+
+.heroTextHolder {
+  display: flex;
+  flex-direction: column;
+}
+
+.lineDivider {
+  width: 100%;
+  height: var(--size-small-unit);
+  border-radius: var(--size-small-unit);
+  background-color: var(--color-accent);
+  box-shadow: var(--shadow-box);
+  margin: calc(var(--size-standard-unit) * 2) 0;
+}
+.buttonHolder {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (orientation: landscape) {
+  .heroBox {
+    flex-direction: row;
+    width: 80vw;
+    height: 80vh;
+    margin-top: 8vh;
+    justify-content: space-around;
+  }
+  .heroTextHolder {
+    width: 50%;
+  }
+  .heroImgWrapper {
+    width: 30%;
+  }
+  .buttonHolder {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (orientation: portrait) {
+  .heroBox {
+    flex-direction: column;
+    width: 90vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    justify-content: center;
+    text-align: center;
+  }
+  .heroImgWrapper {
+    display: flex;
+    height: 50vh;
+  }
+  .lineDivider {
+    display: flex;
+  }
+  .buttonHolder {
+    margin: var(--size-standard-unit) 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
