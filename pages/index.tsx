@@ -9,6 +9,22 @@ import styles from "../styles/index.module.css";
 const Home: NextPage = () => {
   return (
     <body className={styles.pageBody}>
+      <Head>
+        <title>Cory Zimmerman</title>
+        <meta
+          name="description"
+          content="Isn't that shark emoji cool ^ (it's my favorite)"
+        />
+        <meta property="og:title" content="Cory Zimmerman" />
+        <meta
+          property="og:description"
+          content="Isn't that shark emoji cool (it's my favorite)"
+        />
+        <meta
+          property="og:image"
+          content="https://drive.google.com/file/d/18VUN7h7leKfOM9q64lMATxPdwwPY2FIO/preview"
+        />
+      </Head>
       <header className={styles.heroBox}>
         <div className={styles.heroImgWrapper}>
           <Image
