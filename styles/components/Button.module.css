@@ -10,13 +10,25 @@
   text-decoration-line: none;
 }
 
-.button:active {
+.button:active .button:hover {
   background-color: var(--color-secondary);
   color: var(--color-primary);
   transform: scale(1.05);
 }
 
-#socialLink {
+.button:focus {
+  background-color: var(--color-secondary);
+  outline: none;
+  color: var(--color-primary);
+  transform: scale(1.05);
+}
+
+.socialLink {
+  margin-right: var(--size-standard-unit);
+  margin-top: var(--size-standard-unit);
+}
+
+.emailLink {
   margin-right: var(--size-standard-unit);
   margin-top: var(--size-standard-unit);
 }

@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import getEmailLink from "../actions/getEmailLink";
 import portrait from "../assets/profile-light.png";
 import Button from "../components/Button";
 import styles from "../styles/index.module.css";
@@ -34,7 +35,11 @@ const Home: NextPage = () => {
               customStyle={"socialButton"}
               anchor={"https://www.linkedin.com/in/cory-f-zimmerman"}
             />
-            <Button title={"Email"} customStyle={"socialButton"} anchor={""} />
+            <Button
+              title={"Email"}
+              customStyle={"emailButton"}
+              anchor={getEmailLink()}
+            />
             <Button
               title={"Github"}
               customStyle={"socialButton"}

@@ -4,6 +4,15 @@ https://dev.to/alexeagleson/how-to-create-a-dark-mode-component-in-react-3ibg
 https://css-tricks.com/updating-a-css-variable-with-javascript/
 */
 
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .pageBody {
   display: flex;
   flex-direction: column;
@@ -13,6 +22,7 @@ https://css-tricks.com/updating-a-css-variable-with-javascript/
 .heroBox {
   display: flex;
   align-items: center;
+  animation: 0.5s ease-in 0s 1 fadeSlideIn;
 }
 
 .heroTextHolder {
