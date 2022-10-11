@@ -31,19 +31,20 @@ const Home: NextPage = () => {
             src={portrait}
             objectFit={"contain"}
             className={styles.heroImg}
+            alt={"Stylized portrait image."}
           />
         </div>
         <div className={styles.heroTextHolder}>
-          <h1>Hey there!</h1>
-          <h2>I'm Cory.</h2>
+          <h1>{`Hey there!`}</h1>
+          <h2>{`I'm Cory.`}</h2>
           <div className={styles.lineDivider} />
           <p>
-            Welcome to my site!
+            {`Welcome to my site!`}
             <br />
-            I'm a computer science student at Harvard interested in software
-            engineering, economics, and community service.
+            {`I'm a computer science student at Harvard interested in software
+            engineering, economics, and community service.`}
             <br />
-            Shoot me an email if you'd like to chat sometime.
+            {`Shoot me an email if you'd like to chat sometime.`}
           </p>
           <div className={styles.buttonHolder}>
             <Button
