@@ -44,7 +44,7 @@ const Home: NextPage = () => {
             {`I'm a computer science student at Harvard interested in software
             engineering, economics, and community service.`}
             <br />
-            {`Shoot me an email if you'd like to chat sometime.`}
+            {`Shoot me an email if you'd like to chat.`}
           </p>
           <div className={styles.buttonHolder}>
             <Button
