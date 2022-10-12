@@ -6,6 +6,8 @@ import portrait from "../assets/profile-light.png";
 import Button from "../components/Button";
 import styles from "../styles/index.module.css";
 
+// https://stackoverflow.com/questions/26210628/how-pull-changes-from-github-to-bitbucket-after-initial-import
+
 const Home: NextPage = () => {
   return (
     <body className={styles.pageBody}>
