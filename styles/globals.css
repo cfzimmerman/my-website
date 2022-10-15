@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
 
 :root {
   --color-primary: #e6eeff;
@@ -7,22 +6,21 @@
   --color-accent: #115ffa;
   --color-primary-muted: #e6eeff80;
   --color-secondary-muted: #03040f80;
+  --color-accent-muted: #115ffa80;
   --text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
     0px -4px 10px rgba(255, 255, 255, 0.3);
   --size-standard-unit: 1rem;
   --size-small-unit: 0.5rem;
+  --size-xs-unit: 0.25rem;
   --size-cube-unit: 3.5rem;
-  --shadow-box: 10px 10px 18px 0px rgba(0, 0, 0, 0.5);
+  --shadow-box: 10px 10px 18px 0px rgba(0, 0, 0, 0.4);
+  --text-h1: 5rem;
+  --text-h2: 4rem;
+  --text-h3: 3rem;
+  --text-h4: 2rem;
+  --text-p: 1.5rem;
+  --text-small: 1rem;
 }
-
-/*   
-  font-family: "Cousine", monospace;
-  font-family: "Inter", sans-serif;
-
-  -webkit-box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.5);
--moz-box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.5);
-box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.5);
-*/
 
 html {
   padding: 0;
@@ -57,33 +55,33 @@ body[data-theme="dark"] {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: var(--text-h1);
   margin: 0;
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: var(--text-h2);
   margin: 0;
   font-weight: 400;
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: var(--text-h3);
   margin: 0;
 }
 
 h4 {
-  font-size: 2rem;
+  font-size: var(--text-h4);
   margin: 0;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: var(--text-p);
   margin: 0;
 }
 
 small {
-  font-size: 1rem;
+  font-size: var(--text-small);
   margin: 0;
 }
 

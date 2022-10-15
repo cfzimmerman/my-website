@@ -1,0 +1,49 @@
+@keyframes rotateButtonDown {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes rotateButtonUp {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.buttonWrapper {
+  padding: 0;
+  margin: 0;
+  border: calc(var(--size-xs-unit)) solid var(--color-accent-muted);
+  border-radius: var(--size-standard-unit);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  outline: none;
+}
+
+.arrow {
+  height: var(--text-h2);
+  width: var(--text-h2);
+}
+
+.buttonWrapper[data-isActive="true"] {
+  animation-duration: 0.2s;
+  animation-name: rotateButtonDown;
+  transform: rotate(-90deg);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.buttonWrapper[data-isActive="false"] {
+  animation-duration: 0.2s;
+  animation-name: rotateButtonUp;
+  transform: rotate(0deg);
+  color: var(--color-accent-muted);
+}

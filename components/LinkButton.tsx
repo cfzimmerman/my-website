@@ -20,7 +20,7 @@ const getCustomStyle = (customStyle: customStyleOptions) => {
   }
 };
 
-const Button = ({ title, customStyle, anchor }: InputTypes) => {
+const LinkButton = ({ title, customStyle, anchor }: InputTypes) => {
   return (
     <p>
       <a
@@ -33,4 +33,4 @@ const Button = ({ title, customStyle, anchor }: InputTypes) => {
   );
 };
 
-export default Button;
+export default LinkButton;
