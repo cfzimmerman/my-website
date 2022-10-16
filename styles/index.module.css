@@ -44,7 +44,7 @@ https://css-tricks.com/updating-a-css-variable-with-javascript/
   flex-direction: row;
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .heroBox {
     flex-direction: row;
     width: var(--page-width-landscape);
@@ -67,7 +67,7 @@ https://css-tricks.com/updating-a-css-variable-with-javascript/
   }
 }
 
-@media (orientation: portrait) {
+@media screen and (orientation: portrait) {
   .heroBox {
     flex-direction: column;
     width: var(--page-width-portrait);
