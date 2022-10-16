@@ -13,11 +13,11 @@ const areEqual = (previous: InputTypes, next: InputTypes) => {
 
 const RotatingButton = ({ active, action }: InputTypes) => {
   return (
-    <button className={styles.buttonWrapper} data-isActive={active}>
+    <button className={styles.buttonWrapper} data-isactive={active}>
       <ChevronLeft
         onClick={() => action()}
         className={styles.arrow}
-        data-isActive={active}
+        data-isactive={active}
       />
     </button>
   );

@@ -1,0 +1,61 @@
+@keyframes listGrow {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 100vh;
+  }
+}
+
+@keyframes listShrink {
+  0% {
+    max-height: 100vh;
+  }
+  100% {
+    max-height: 0;
+  }
+}
+
+.dropDown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  border: var(--size-xs-unit) solid var(--color-accent);
+  border-radius: calc(var(--size-standard-unit) * 2);
+  padding: var(--size-small-unit);
+  box-shadow: inset var(--shadow-box), var(--shadow-box);
+}
+
+.dropDownContent {
+  overflow: hidden;
+  max-height: 0;
+}
+
+.dropDownContent[data-isactive="false"] {
+  animation-name: listShrink;
+  animation-duration: 0.25s;
+}
+
+.dropDownContent[data-isactive="true"] {
+  animation-name: listGrow;
+  max-height: 100%;
+  animation-duration: 1s;
+}
+
+@media (orientation: landscape) {
+  .accordion {
+    width: var(--page-width-landscape);
+  }
+}
+
+@media (orientation: portrait) {
+  .accordion {
+    width: var(--page-width-portrait);
+  }
+}

@@ -38,6 +38,7 @@ https://css-tricks.com/updating-a-css-variable-with-javascript/
   box-shadow: var(--shadow-box);
   margin: calc(var(--size-standard-unit) * 2) 0;
 }
+
 .buttonHolder {
   display: flex;
   flex-direction: row;
@@ -46,7 +47,7 @@ https://css-tricks.com/updating-a-css-variable-with-javascript/
 @media (orientation: landscape) {
   .heroBox {
     flex-direction: row;
-    width: 80vw;
+    width: var(--page-width-landscape);
     height: 80vh;
     margin-top: 5vh;
     justify-content: space-around;
@@ -64,27 +65,12 @@ https://css-tricks.com/updating-a-css-variable-with-javascript/
   .accordionWrapper {
     margin: 5vh 0;
   }
-  .accordion {
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-    border: var(--size-xs-unit) solid var(--color-accent);
-    border-radius: calc(var(--size-standard-unit) * 2);
-    padding: var(--size-small-unit);
-    box-shadow: inset var(--shadow-box), var(--shadow-box);
-  }
-  .dropDown {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
-  }
 }
 
 @media (orientation: portrait) {
   .heroBox {
     flex-direction: column;
-    width: 90vw;
+    width: var(--page-width-portrait);
     margin-top: 2vh;
     margin-bottom: 2vh;
     justify-content: center;
@@ -101,5 +87,8 @@ https://css-tricks.com/updating-a-css-variable-with-javascript/
     margin: var(--size-standard-unit) 0;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .accordionWrapper {
+    margin: 2vh 0;
   }
 }

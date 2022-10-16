@@ -3,14 +3,15 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import getEmailLink from "../actions/getEmailLink";
+import AccordionUnit from "../components/AccordionUnit";
 import HomeHeader from "../components/HomeHeader";
 import LinkButton from "../components/LinkButton";
 import RotatingButton from "../components/RotatingButton";
 import styles from "../styles/index.module.css";
 
-type DropDownOptions = "courses";
+export type DropDownOptions = "courses";
 
-interface DropDownTypes {
+export interface DropDownTypes {
   courses: boolean;
 }
 
@@ -44,15 +45,11 @@ const Home: NextPage = () => {
       </Head>
       <HomeHeader />
       <main className={styles.accordionWrapper}>
-        <section className={styles.accordion}>
-          <menu className={styles.dropDown}>
-            <h3>Courses</h3>
-            <RotatingButton
-              active={dropDown.courses}
-              action={() => DropDownAction("courses")}
-            />
-          </menu>
-        </section>
+        <AccordionUnit
+          isActive={dropDown.courses}
+          category={"courses"}
+          DropDownAction={() => DropDownAction("courses")}
+        />
       </main>
     </body>
   );

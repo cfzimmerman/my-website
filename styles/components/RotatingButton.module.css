@@ -33,7 +33,7 @@
   width: var(--text-h2);
 }
 
-.buttonWrapper[data-isActive="true"] {
+.buttonWrapper[data-isactive="true"] {
   animation-duration: 0.2s;
   animation-name: rotateButtonDown;
   transform: rotate(-90deg);
@@ -41,7 +41,7 @@
   color: var(--color-accent);
 }
 
-.buttonWrapper[data-isActive="false"] {
+.buttonWrapper[data-isactive="false"] {
   animation-duration: 0.2s;
   animation-name: rotateButtonUp;
   transform: rotate(0deg);
