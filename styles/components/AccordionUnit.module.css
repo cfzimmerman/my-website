@@ -52,45 +52,6 @@
   padding-bottom: var(--size-standard-unit);
 }
 
-.lineDivider {
-  width: 100%;
-  height: var(--size-xs-unit);
-  border-radius: var(--size-xs-unit);
-  background-color: var(--color-accent);
-  box-shadow: var(--shadow-box);
-  margin: var(--size-standard-unit) 0;
-}
-
-.courseTitle {
-  margin: var(--size-xs-unit) 0;
-}
-
-.tagHolder {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: var(--size-small-unit);
-}
-
-.tagBody {
-  background-color: var(--color-secondary-muted);
-  border-radius: var(--size-small-unit);
-  margin-right: var(--size-small-unit);
-}
-
-.tagText {
-  color: var(--color-primary);
-  padding: var(--size-xs-unit);
-}
-
-.description {
-  margin: var(--size-small-unit) 0;
-}
-
-.textLink {
-  color: var(--color-accent);
-}
-
 @media (orientation: landscape) {
   .widthConstraint {
     width: var(--page-width-landscape);

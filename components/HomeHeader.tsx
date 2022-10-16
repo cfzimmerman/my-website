@@ -39,7 +39,7 @@ const HomeHeader = () => {
             anchor={getEmailLink()}
           />
           <LinkButton
-            title={"Github"}
+            title={"GitHub"}
             customStyle={"socialButton"}
             anchor={"https://github.com/cfzimmerman"}
           />
