@@ -1,6 +1,7 @@
 import { DropDownOptions, DropDownTypes } from "../pages";
 import styles from "../styles/components/AccordionUnit.module.css";
 import CoursesItem from "./CoursesItem";
+import coursesData, { CoursesItemType } from "../data/coursesData";
 import RotatingButton from "./RotatingButton";
 
 interface InputTypes {
@@ -21,7 +22,14 @@ const AccordionUnit = ({ isActive, category, DropDownAction }: InputTypes) => {
           />
         </menu>
         <section className={styles.dropDownContent} data-isactive={isActive}>
-          <CoursesItem />
+          {coursesData.map((item: CoursesItemType) => (
+            <CoursesItem
+              title={item.title}
+              tags={item.tags}
+              Description={item.Description}
+              stem={item.stem}
+            />
+          ))}
         </section>
       </section>
     </div>

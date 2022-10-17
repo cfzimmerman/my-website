@@ -1,6 +1,17 @@
 import React from "react";
 import styles from "../styles/components/Tag.module.css";
 
+export type ActiveTags =
+  | "Python"
+  | "C"
+  | "Scratch"
+  | "Python"
+  | "SQL"
+  | "HTML"
+  | "CSS"
+  | "JavaScript"
+  | "Flask";
+
 interface InputTypes {
   title: string;
 }
