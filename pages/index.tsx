@@ -24,6 +24,7 @@ const Home: NextPage = () => {
   const [dropDown, setDropDown] = useState<DropDownTypes>({
     courses: false,
   });
+  const [stemOnlyCourses, setStemOnlyCourses] = useState<boolean>(false);
 
   const DropDownAction = (target: DropDownOptions) => {
     setDropDown((options) => ({
@@ -56,12 +57,15 @@ const Home: NextPage = () => {
           isActive={dropDown.courses}
           category={"courses"}
           DropDownAction={() => DropDownAction("courses")}
-          AccordionContent={() => (
-            <Suspense fallback={"Loading"}>
-              <AccordionCourses isActive={dropDown.courses} />
-            </Suspense>
-          )}
-        />
+        >
+          <Suspense fallback={"Loading"}>
+            <AccordionCourses
+              isActive={dropDown.courses}
+              stemOnlyCourses={stemOnlyCourses}
+              setStemOnlyCourses={setStemOnlyCourses}
+            />
+          </Suspense>
+        </AccordionUnit>
       </main>
     </body>
   );

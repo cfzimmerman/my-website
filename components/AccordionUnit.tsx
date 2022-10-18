@@ -1,3 +1,4 @@
+import React from "react";
 import { DropDownOptions, DropDownTypes } from "../pages";
 import RotatingButton from "./RotatingButton";
 import styles from "../styles/components/AccordionUnit.module.css";
@@ -6,14 +7,14 @@ interface InputTypes {
   isActive: boolean;
   category: DropDownOptions;
   DropDownAction: Function;
-  AccordionContent: Function;
+  children?: JSX.Element;
 }
 
 const AccordionUnit = ({
   isActive,
   category,
   DropDownAction,
-  AccordionContent,
+  children,
 }: InputTypes) => {
   return (
     <div className={styles.widthConstraint}>
@@ -25,7 +26,7 @@ const AccordionUnit = ({
             action={() => DropDownAction(category)}
           />
         </menu>
-        <AccordionContent />
+        {children}
       </section>
     </div>
   );

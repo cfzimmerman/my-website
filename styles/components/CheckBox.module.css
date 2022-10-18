@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--text-p);
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkMark {
+  display: flex;
+  height: calc(var(--size-standard-unit) * 1.3);
+  width: calc(var(--size-standard-unit) * 1.3);
+  border-radius: var(--size-xs-unit);
+  outline: calc(var(--size-xs-unit) * 0.5) solid var(--color-accent);
+  margin-right: var(--size-small-unit);
+}
+
+.container:hover input ~ .checkMark {
+  background-color: var(--color-secondary-muted);
+}
+
+.container input:checked ~ .checkMark {
+  background-color: var(--color-accent);
+  outline: calc(var(--size-xs-unit) * 0.5) solid transparent;
+}
+
+.checkMark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkMark:after {
+  display: flex;
+}
+
+.container .checkMark:after {
+  left: calc(var(--size-standard-unit) * 0.35);
+  top: calc(var(--size-standard-unit) * 0.3);
+  width: calc(var(--size-standard-unit) * 0.35);
+  height: calc(var(--size-standard-unit) * 0.6125);
+  border: solid var(--color-primary);
+  border-width: 0 calc(var(--size-standard-unit) * 0.2)
+    calc(var(--size-standard-unit) * 0.2) 0;
+  transform: rotate(45deg);
+}
