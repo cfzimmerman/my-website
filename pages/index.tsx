@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import Image from "next/image";
 import React, { Suspense, useState } from "react";
 import AccordionUnit from "../components/AccordionUnit";
 import HomeHeader from "../components/HomeHeader";

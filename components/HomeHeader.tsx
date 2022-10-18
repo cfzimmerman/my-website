@@ -1,8 +1,13 @@
+import React from "react";
 import Image from "next/image";
 import LinkButton from "./LinkButton";
 import getEmailLink from "../actions/getEmailLink";
 import portrait from "../assets/profile-light.png";
 import styles from "../styles/index.module.css";
+
+const areEqual = () => {
+  return true;
+};
 
 const HomeHeader = () => {
   return (
@@ -13,6 +18,7 @@ const HomeHeader = () => {
           objectFit={"contain"}
           className={styles.heroImg}
           alt={"Stylized portrait image."}
+          priority
         />
       </div>
       <div className={styles.heroTextHolder}>
@@ -49,4 +55,4 @@ const HomeHeader = () => {
   );
 };
 
-export default HomeHeader;
+export default React.memo(HomeHeader, areEqual);

@@ -25,7 +25,6 @@ const AccordionCourses = ({
   stemOnlyCourses,
   setStemOnlyCourses,
 }: InputTypes) => {
-  console.log("AccordionCourses: " + stemOnlyCourses);
   return (
     <section className={styles.dropDownContent} data-isactive={isActive}>
       <div className={styles.checkboxWrapper}>
@@ -45,5 +44,4 @@ const AccordionCourses = ({
   );
 };
 
-// export default React.memo(AccordionCourses, areEqual);
-export default AccordionCourses;
+export default React.memo(AccordionCourses, areEqual);
