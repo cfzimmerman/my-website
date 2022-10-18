@@ -10,6 +10,8 @@ interface InputTypes {
   children?: JSX.Element;
 }
 
+// Intentionally not memoized. Child updates should persist for child prop updates that aren't passed to this component (when they are, the re-render causes animation flickers)
+
 const AccordionUnit = ({
   isActive,
   category,

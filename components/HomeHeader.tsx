@@ -3,7 +3,7 @@ import Image from "next/image";
 import LinkButton from "./LinkButton";
 import getEmailLink from "../actions/getEmailLink";
 import portrait from "../assets/profile-light.png";
-import styles from "../styles/index.module.css";
+import styles from "../styles/components/HomeHeader.module.css";
 
 const areEqual = () => {
   return true;

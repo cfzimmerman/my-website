@@ -1,10 +1,7 @@
-import getEmailLink from "../actions/getEmailLink";
+import React from "react";
 import styles from "../styles/components/Button.module.css";
 
 type customStyleOptions = "socialButton" | "emailButton";
-const ePt1 = ":cfzimmerman";
-const ePt2 = "college";
-const ePt3 = ".harvard.edu";
 
 interface InputTypes {
   title: string;
@@ -12,11 +9,16 @@ interface InputTypes {
   anchor: string;
 }
 
+const areEqual = (prev: InputTypes, next: InputTypes) => {
+  return prev.anchor === next.anchor;
+};
+
 const getCustomStyle = (customStyle: customStyleOptions) => {
-  if (customStyle === "socialButton") {
-    return styles.socialLink;
-  } else if (customStyle === "emailButton") {
-    return styles.emailLink;
+  switch (customStyle) {
+    case "socialButton":
+      return styles.socialLink;
+    case "emailButton":
+      return styles.emailLink;
   }
 };
 
@@ -33,4 +35,4 @@ const LinkButton = ({ title, customStyle, anchor }: InputTypes) => {
   );
 };
 
-export default LinkButton;
+export default React.memo(LinkButton, areEqual);

@@ -1,9 +1,14 @@
+import React from "react";
 import styles from "../styles/components/CheckBox.module.css";
 
 interface InputTypes {
   setIsActive: Function;
   title: string;
 }
+
+const areEqual = (prev: InputTypes, next: InputTypes) => {
+  return prev.title === next.title;
+};
 
 const CheckBox = ({ setIsActive, title }: InputTypes) => {
   return (
@@ -19,4 +24,4 @@ const CheckBox = ({ setIsActive, title }: InputTypes) => {
   );
 };
 
-export default CheckBox;
+export default React.memo(CheckBox, areEqual);
