@@ -10,10 +10,12 @@ export type ActiveTags =
   | "HTML"
   | "CSS"
   | "JavaScript"
-  | "Flask";
+  | "Flask"
+  | "Calculus";
 
 interface InputTypes {
   title: string;
+  key: string;
 }
 
 const areEqual = (prev: InputTypes, next: InputTypes) => {

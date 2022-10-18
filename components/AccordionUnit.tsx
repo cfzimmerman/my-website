@@ -24,6 +24,7 @@ const AccordionUnit = ({ isActive, category, DropDownAction }: InputTypes) => {
         <section className={styles.dropDownContent} data-isactive={isActive}>
           {coursesData.map((item: CoursesItemType) => (
             <CoursesItem
+              key={item.key}
               title={item.title}
               tags={item.tags}
               Description={item.Description}
