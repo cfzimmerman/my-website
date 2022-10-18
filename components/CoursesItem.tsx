@@ -1,6 +1,12 @@
+import React from "react";
 import { CoursesItemType } from "../data/coursesData";
 import styles from "../styles/components/CoursesItem.module.css";
 import Tag, { ActiveTags } from "./Tag";
+
+const areEqual = (prev: CoursesItemType, next: CoursesItemType) => {
+  // Title serves as an easily-readable proxy for the other elements
+  return prev.title === next.title;
+};
 
 const CoursesItem = ({ title, tags, Description }: CoursesItemType) => {
   return (
@@ -17,4 +23,4 @@ const CoursesItem = ({ title, tags, Description }: CoursesItemType) => {
   );
 };
 
-export default CoursesItem;
+export default React.memo(CoursesItem, areEqual);

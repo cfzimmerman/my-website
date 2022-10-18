@@ -52,6 +52,12 @@
   padding-bottom: var(--size-standard-unit);
 }
 
+.checkboxWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 @media (orientation: landscape) {
   .widthConstraint {
     width: var(--page-width-landscape);
