@@ -2,7 +2,7 @@ import React from "react";
 import CoursesItem from "./CoursesItem";
 import coursesData, { CoursesItemType } from "../data/coursesData";
 import styles from "../styles/components/AccordionUnit.module.css";
-import CheckBox from "./Checkbox";
+import CheckBox from "./CheckBox";
 
 interface InputTypes {
   isActive: boolean;
