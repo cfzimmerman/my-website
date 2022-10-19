@@ -49,6 +49,7 @@ const Home: NextPage = () => {
           property="og:image"
           content="https://drive.google.com/file/d/18VUN7h7leKfOM9q64lMATxPdwwPY2FIO/preview"
         />
+        <meta name="author" content="Cory Zimmerman" />
       </Head>
       <HomeHeader />
       <main className={styles.accordionWrapper}>

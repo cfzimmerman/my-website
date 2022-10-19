@@ -11,7 +11,16 @@ export type ActiveTags =
   | "CSS"
   | "JavaScript"
   | "Flask"
-  | "Calculus";
+  | "Calculus"
+  | "Probability"
+  | "Statistics"
+  | "Discrete Math"
+  | "Graph Theory"
+  | "OCaml"
+  | "Algorithms"
+  | "Object Oriented Programming"
+  | "Imperative Programming"
+  | "Functional Programming";
 
 interface InputTypes {
   title: string;

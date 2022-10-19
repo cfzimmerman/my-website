@@ -87,3 +87,7 @@ small {
   font-size: var(--text-small);
   margin: 0;
 }
+
+a {
+  color: var(--color-accent);
+}

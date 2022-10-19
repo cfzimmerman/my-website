@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/components/Button.module.css";
+import styles from "../styles/components/LinkButton.module.css";
 
 type customStyleOptions = "socialButton" | "emailButton";
 

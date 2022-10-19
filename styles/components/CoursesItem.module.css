@@ -18,11 +18,3 @@
   margin-bottom: var(--size-small-unit);
   flex-wrap: wrap;
 }
-
-.description {
-  margin: var(--size-small-unit) 0;
-}
-
-.textLink {
-  color: var(--color-accent);
-}

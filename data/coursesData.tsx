@@ -1,9 +1,12 @@
 import { ActiveTags } from "../components/Tag";
 import {
+  CS20,
   CS50,
+  CS51,
   ECON1010A,
   ECON10A,
   ECON10B,
+  ENGSCI150,
   ENGSCI95R,
   EXPOS20,
   FRSEMR52E,
@@ -11,8 +14,9 @@ import {
   GERMAN20B,
   MATH1A,
   MATH1B,
+  PENDING,
   PSY1,
-} from "./coursesDescription";
+} from "./coursesDescriptions";
 
 export interface CoursesItemType {
   key: string;
@@ -23,6 +27,41 @@ export interface CoursesItemType {
 }
 
 const coursesData: CoursesItemType[] = [
+  {
+    key: "CS51",
+    title: "CS 51: Abstraction and Design in Computation",
+    tags: [
+      "Algorithms",
+      "OCaml",
+      "Imperative Programming",
+      "Functional Programming",
+      "Object Oriented Programming",
+    ],
+    Description: CS51,
+    stem: true,
+  },
+  {
+    key: "ENGSCI150",
+    title: "ENGSCI 150: Probability with Engineering Applications",
+    tags: ["Probability", "Statistics"],
+    Description: ENGSCI150,
+    stem: true,
+  },
+  {
+    key: "PENDING",
+    title: "PENDING",
+    tags: [],
+    Description: PENDING,
+    stem: false,
+  },
+  {
+    key: "CS20",
+    title: "CS 20: Discrete Mathematics for Computer Science",
+    tags: ["Discrete Math", "Probability", "Graph Theory"],
+    Description: CS20,
+    stem: true,
+  },
+
   {
     key: "ENGSCI95R",
     title: "ENGSCI 95R: Startup R&D",
@@ -91,6 +130,7 @@ const coursesData: CoursesItemType[] = [
       "JavaScript",
       "Flask",
       "Scratch",
+      "Imperative Programming",
     ],
     Description: CS50,
     stem: true,
