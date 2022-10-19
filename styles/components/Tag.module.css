@@ -1,0 +1,11 @@
+.tagBody {
+  background-color: var(--color-secondary-muted);
+  border-radius: var(--size-small-unit);
+  margin-right: var(--size-small-unit);
+  margin-bottom: var(--size-small-unit);
+}
+
+.tagText {
+  color: var(--color-primary);
+  padding: var(--size-xs-unit);
+}

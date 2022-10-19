@@ -1,0 +1,60 @@
+@keyframes rotateButtonDown {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes rotateButtonUp {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.buttonWrapper {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: var(--size-standard-unit);
+  outline: none;
+}
+
+.arrow {
+  height: var(--text-h2);
+  width: var(--text-h2);
+}
+
+.buttonWrapper[data-isactive="true"] {
+  animation-duration: 0.2s;
+  animation-name: rotateButtonDown;
+  transform: rotate(-90deg);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.buttonWrapper[data-isactive="false"] {
+  animation-duration: 0.2s;
+  animation-name: rotateButtonUp;
+  transform: rotate(0deg);
+  color: var(--color-accent-muted);
+}
+
+@media (orientation: landscape) {
+  .buttonWrapper {
+    border: calc(var(--size-xs-unit)) solid var(--color-accent-muted);
+  }
+}
+
+@media (orientation: portrait) {
+  .buttonWrapper {
+    border: 0;
+  }
+}

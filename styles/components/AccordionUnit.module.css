@@ -1,0 +1,78 @@
+@keyframes listGrow {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 100vh;
+  }
+}
+
+@keyframes listShrink {
+  0% {
+    max-height: 100vh;
+    padding-bottom: var(--size-standard-unit);
+  }
+  100% {
+    max-height: 0;
+    padding-bottom: 0;
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  border: var(--size-xs-unit) solid var(--color-accent);
+  border-radius: calc(var(--size-standard-unit) * 2);
+  box-shadow: inset var(--shadow-box), var(--shadow-box);
+}
+
+.dropDown {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropDownContent {
+  overflow: hidden;
+  max-height: 0;
+}
+
+.dropDownContent[data-isactive="false"] {
+  animation-name: listShrink;
+  animation-duration: 0.25s;
+  padding-bottom: 0;
+}
+
+.dropDownContent[data-isactive="true"] {
+  animation-name: listGrow;
+  max-height: 100%;
+  animation-duration: 1s;
+  padding-bottom: var(--size-standard-unit);
+}
+
+.checkboxWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: calc(var(--size-xs-unit) * 0.5);
+}
+
+@media (orientation: landscape) {
+  .widthConstraint {
+    width: var(--page-width-landscape);
+  }
+  .accordion {
+    padding: 0 var(--size-large-unit);
+  }
+}
+
+@media (orientation: portrait) {
+  .widthConstraint {
+    width: var(--page-width-portrait);
+  }
+  .accordion {
+    padding: 0 var(--size-large-unit);
+  }
+}

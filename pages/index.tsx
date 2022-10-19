@@ -1,14 +1,37 @@
 import type { NextPage } from "next";
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import Image from "next/image";
-import getEmailLink from "../actions/getEmailLink";
-import portrait from "../assets/profile-light.png";
-import Button from "../components/Button";
+import React, { Suspense, useState } from "react";
+import AccordionUnit from "../components/AccordionUnit";
+import HomeHeader from "../components/HomeHeader";
 import styles from "../styles/index.module.css";
 
-// https://stackoverflow.com/questions/26210628/how-pull-changes-from-github-to-bitbucket-after-initial-import
+const AccordionCourses = dynamic(
+  () => import("../components/AccordionCourses"),
+  {
+    suspense: true,
+  }
+);
+
+export type DropDownOptions = "courses";
+
+export interface DropDownTypes {
+  courses: boolean;
+}
 
 const Home: NextPage = () => {
+  const [dropDown, setDropDown] = useState<DropDownTypes>({
+    courses: false,
+  });
+  const [stemOnlyCourses, setStemOnlyCourses] = useState<boolean>(false);
+
+  const DropDownAction = (target: DropDownOptions) => {
+    setDropDown((options) => ({
+      ...options,
+      ...{ [target]: !dropDown[target] },
+    }));
+  };
+
   return (
     <body className={styles.pageBody}>
       <Head>
@@ -26,47 +49,24 @@ const Home: NextPage = () => {
           property="og:image"
           content="https://drive.google.com/file/d/18VUN7h7leKfOM9q64lMATxPdwwPY2FIO/preview"
         />
+        <meta name="author" content="Cory Zimmerman" />
       </Head>
-      <header className={styles.heroBox}>
-        <div className={styles.heroImgWrapper}>
-          <Image
-            src={portrait}
-            objectFit={"contain"}
-            className={styles.heroImg}
-            alt={"Stylized portrait image."}
-          />
-        </div>
-        <div className={styles.heroTextHolder}>
-          <h1>{`Hey there!`}</h1>
-          <h2>{`I'm Cory.`}</h2>
-          <div className={styles.lineDivider} />
-          <p>
-            {`Welcome to my site!`}
-            <br />
-            {`I'm a computer science student at Harvard interested in software
-            engineering, economics, and community service.`}
-            <br />
-            {`Shoot me an email if you'd like to chat.`}
-          </p>
-          <div className={styles.buttonHolder}>
-            <Button
-              title={"LinkedIn"}
-              customStyle={"socialButton"}
-              anchor={"https://www.linkedin.com/in/cory-f-zimmerman"}
+      <HomeHeader />
+      <main className={styles.accordionWrapper}>
+        <AccordionUnit
+          isActive={dropDown.courses}
+          category={"courses"}
+          DropDownAction={() => DropDownAction("courses")}
+        >
+          <Suspense fallback={"Loading"}>
+            <AccordionCourses
+              isActive={dropDown.courses}
+              stemOnlyCourses={stemOnlyCourses}
+              setStemOnlyCourses={setStemOnlyCourses}
             />
-            <Button
-              title={"Email"}
-              customStyle={"emailButton"}
-              anchor={getEmailLink()}
-            />
-            <Button
-              title={"Github"}
-              customStyle={"socialButton"}
-              anchor={"https://github.com/cfzimmerman"}
-            />
-          </div>
-        </div>
-      </header>
+          </Suspense>
+        </AccordionUnit>
+      </main>
     </body>
   );
 };
