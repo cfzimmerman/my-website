@@ -41,18 +41,18 @@ html {
   background-position: 0 0, 10px 10px;
 }
 
-body {
+main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-body[data-theme="light"] {
+main[data-theme="light"] {
   background-color: var(--color-primary);
   color: var(--color-secondary);
 }
 
-body[data-theme="dark"] {
+main[data-theme="dark"] {
   background-color: var(--color-secondary);
   color: var(--color-primary);
 }

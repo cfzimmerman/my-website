@@ -1,7 +1,8 @@
+import Link from "next/link";
 import React from "react";
 import styles from "../styles/components/LinkButton.module.css";
 
-type customStyleOptions = "socialButton" | "emailButton";
+type customStyleOptions = "socialButton" | "emailButton" | "listButton";
 
 interface InputTypes {
   title: string;
@@ -19,19 +20,18 @@ const getCustomStyle = (customStyle: customStyleOptions) => {
       return styles.socialLink;
     case "emailButton":
       return styles.emailLink;
+    case "listButton":
+      return styles.listLink;
   }
 };
 
 const LinkButton = ({ title, customStyle, anchor }: InputTypes) => {
   return (
-    <p>
-      <a
-        className={[styles.button, getCustomStyle(customStyle)].join(" ")}
-        href={anchor}
-      >
-        {title}
+    <Link href={anchor}>
+      <a className={[styles.button, getCustomStyle(customStyle)].join(" ")}>
+        <p>{title}</p>
       </a>
-    </p>
+    </Link>
   );
 };
 
