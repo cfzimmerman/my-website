@@ -1,0 +1,48 @@
+.pageMain {
+  min-height: 95vh;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.allPageContent {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (orientation: landscape) {
+  .allPageContent {
+    width: var(--page-width-landscape);
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+  .pageItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 37.5vw;
+    height: 30.5vw;
+    overflow: hidden;
+  }
+  .mainImage {
+    border-radius: var(--size-xl-unit);
+    box-shadow: var(--shadow-box);
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .allPageContent {
+    flex-direction: column;
+    text-align: center;
+    width: var(--page-width-portrait);
+  }
+  .pageItem {
+    width: 85vw;
+    min-height: 40vh;
+    margin: var(--size-standard-unit) 0;
+  }
+}

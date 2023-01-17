@@ -57,7 +57,7 @@ const Home: NextPage = () => {
         <meta name="author" content="Cory Zimmerman" />
       </Head>
       <HomeHeader />
-      <div className={styles.accordionWrapper}>
+      <div className={styles.mainWrapper}>
         <AccordionUnit
           isActive={dropDown.courses}
           category={"courses"}
