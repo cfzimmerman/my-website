@@ -2,15 +2,6 @@ import styles from "../styles/WorkExperience.module.css";
 import newspaper from "../assets/newspaper.jpeg";
 import Image from "next/image";
 
-export async function getServerSideProps() {
-  return {
-    redirect: {
-      permanent: false,
-      destination: "/",
-    },
-  };
-}
-
 const WorkExperience = () => {
   return (
     <main className={styles.pageMain}>
@@ -21,6 +12,7 @@ const WorkExperience = () => {
               objectFit="cover"
               src={newspaper}
               className={styles.mainImage}
+              alt="Newspaper story preview"
               // Shadow and border radius! How to extend classes?
             />
           </div>
