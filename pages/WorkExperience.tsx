@@ -2,6 +2,15 @@ import styles from "../styles/WorkExperience.module.css";
 import newspaper from "../assets/newspaper.jpeg";
 import Image from "next/image";
 
+export async function getServerSideProps() {
+  return {
+    redirect: {
+      permanent: false,
+      destination: "/",
+    },
+  };
+}
+
 const WorkExperience = () => {
   return (
     <main className={styles.pageMain}>
