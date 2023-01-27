@@ -16,7 +16,7 @@ import {
   MATH1B,
   PENDING,
   PSY1,
-} from "./CoursesDescriptions";
+} from "./CoursesDescriptions.jsx";
 
 export interface CoursesItemType {
   key: string;
