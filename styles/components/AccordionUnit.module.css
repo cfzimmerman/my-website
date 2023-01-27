@@ -24,6 +24,7 @@
   border: var(--size-xs-unit) solid var(--color-accent);
   border-radius: calc(var(--size-standard-unit) * 2);
   box-shadow: inset var(--shadow-box), var(--shadow-box);
+  margin-bottom: var(--size-large-unit);
 }
 
 .dropDown {

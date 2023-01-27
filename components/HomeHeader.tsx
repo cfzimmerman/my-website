@@ -26,10 +26,8 @@ const HomeHeader = () => {
         <h2>{`I'm Cory.`}</h2>
         <div className={styles.lineDivider} />
         <p>
-          {`Welcome to my site!`}
-          <br />
           {`I'm a computer science student at Harvard interested in software
-            engineering, economics, and community service.`}
+            engineering, economics, and artificial intelligence.`}
           <br />
           {`Shoot me an email if you'd like to chat.`}
         </p>

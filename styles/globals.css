@@ -9,6 +9,7 @@
   --color-accent-muted: #115ffa80;
   --text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
     0px -4px 10px rgba(255, 255, 255, 0.3);
+  --size-xl-unit: 3rem;
   --size-large-unit: 2rem;
   --size-standard-unit: 1rem;
   --size-small-unit: 0.5rem;
@@ -41,18 +42,18 @@ html {
   background-position: 0 0, 10px 10px;
 }
 
-body {
+main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-body[data-theme="light"] {
+main[data-theme="light"] {
   background-color: var(--color-primary);
   color: var(--color-secondary);
 }
 
-body[data-theme="dark"] {
+main[data-theme="dark"] {
   background-color: var(--color-secondary);
   color: var(--color-primary);
 }

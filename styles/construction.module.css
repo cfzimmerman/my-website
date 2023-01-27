@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--size-standard-unit);
+}
+
+.textSpacer {
+  margin: var(--size-standard-unit) 0;
+}

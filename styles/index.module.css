@@ -5,13 +5,13 @@
 }
 
 @media screen and (orientation: landscape) {
-  .accordionWrapper {
-    margin: 5vh 0;
+  .mainWrapper {
+    padding: 5vh 0;
   }
 }
 
 @media screen and (orientation: portrait) {
-  .accordionWrapper {
-    margin: 2vh 0;
+  .mainWrapper {
+    padding: 2vh 0;
   }
 }

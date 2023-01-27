@@ -6,7 +6,8 @@ import styles from "../styles/components/AccordionUnit.module.css";
 interface InputTypes {
   isActive: boolean;
   category: DropDownOptions;
-  DropDownAction: Function;
+  dropDownAction: Function;
+  title: string;
   children?: JSX.Element;
 }
 
@@ -15,17 +16,18 @@ interface InputTypes {
 const AccordionUnit = ({
   isActive,
   category,
-  DropDownAction,
+  dropDownAction,
+  title,
   children,
 }: InputTypes) => {
   return (
     <div className={styles.widthConstraint}>
       <section className={styles.accordion}>
         <menu className={styles.dropDown}>
-          <h3 className={styles.header}>Courses</h3>
+          <h3 className={styles.header}>{title}</h3>
           <RotatingButton
             active={isActive}
-            action={() => DropDownAction(category)}
+            action={() => dropDownAction(category)}
           />
         </menu>
         {children}

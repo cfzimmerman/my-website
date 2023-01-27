@@ -1,0 +1,8 @@
+.lineDivider {
+  width: 100%;
+  height: var(--size-xs-unit);
+  border-radius: var(--size-xs-unit);
+  background-color: var(--color-accent);
+  box-shadow: var(--shadow-box);
+  margin: var(--size-large-unit) 0;
+}
