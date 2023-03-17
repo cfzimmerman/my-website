@@ -22,11 +22,11 @@ const HomeHeader = () => {
         />
       </div>
       <div className={styles.heroTextHolder}>
-        <h2>{`Welcome! I'm Cory.`}</h2>
+        <h2>{`Hey! I'm Cory.`}</h2>
         <div className={styles.lineDivider} />
         <p>
-          I study computer science at Harvard and am passionate about building
-          cool software.
+          I study computer science at Harvard, and I'm excited about building
+          cool software!
         </p>
         <div className={styles.buttonHolder}>
           <LinkButton

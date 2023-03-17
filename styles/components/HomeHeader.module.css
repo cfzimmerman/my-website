@@ -16,6 +16,7 @@
 .heroTextHolder {
   display: flex;
   flex-direction: column;
+  margin-top: var(--size-standard-unit);
 }
 
 .lineDivider {
@@ -37,7 +38,7 @@
   .heroBox {
     flex-direction: row;
     width: var(--page-width-landscape);
-    height: 80vh;
+    height: 70vh;
     margin-top: 5vh;
     justify-content: space-around;
   }

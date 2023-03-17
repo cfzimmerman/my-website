@@ -6,6 +6,7 @@ import AccordionUnit from "../components/AccordionUnit";
 import HomeHeader from "../components/HomeHeader";
 import styles from "../styles/index.module.css";
 import AccordionExperience from "../components/AccordionExperience";
+import { useMediaQuery } from "@mui/material";
 
 const AccordionCourses = dynamic(
   () => import("../components/AccordionCourses"),
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
     experience: false,
   });
   const [stemOnlyCourses, setStemOnlyCourses] = useState<boolean>(false);
+  const smallScreen = useMediaQuery("(max-width:500px)");
 
   const dropDownAction = (target: DropDownOptions) => {
     setDropDown((options) => ({
@@ -59,7 +61,7 @@ const Home: NextPage = () => {
         <AccordionUnit
           isActive={dropDown.experience}
           category="experience"
-          title="Experience"
+          title={smallScreen ? "Work" : "Experience"}
           dropDownAction={dropDownAction}
         >
           <AccordionExperience isActive={dropDown.experience} />

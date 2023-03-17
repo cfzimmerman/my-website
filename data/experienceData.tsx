@@ -1,24 +1,23 @@
 const SOLESCA = () => (
   <p>
-    <a href="https://solesca.com/">Solesca</a> sells software tools that help
-    solar developers design projects (very similar to Figma). My work has
-    focused on building real-time infrastructure enabling multi user
-    collaboration at scale.
+    <a href="https://solesca.com/">Solesca</a> sells software that helps solar
+    developers design projects (similar to Figma). I'm building infrastructure
+    enabling multi user real-time collaboration at scale.
     <br /> <br />
     In the role, {"I've"} enjoyed the opportunity to tackle architecture design
-    challenges while building a generalist SWE skill set.
+    challenges while building a do-anything SWE skill set.
   </p>
 );
 
 const RENDER = () => (
   <p>
-    Between my first and second years of college, I got involved with a startup
+    Between my first and second years of college, I got involved in a startup
     and eventually took a year off school to pursue it as a technical
     co-founder.
     <br /> <br />
-    As my first real introduction to software engineering, Render gave me a
-    strong foundation in full stack development and a basic understanding of
-    modern web app architecture.
+    As a hands-on introduction to software engineering, Render gave me a strong
+    foundation in full stack development and a basic understanding of modern web
+    app architecture.
     <br /> <br />
     The codebase was held privately, but {"here's"} a video{" "}
     <a href="https://youtu.be/fp9qIQecDdw">walkthrough</a> of what I built.
@@ -27,26 +26,24 @@ const RENDER = () => (
 
 const HSA = () => (
   <p>
-    As a college freshman, I joined Harvard Student Agencies, a club/business
-    managing an umbrella of companies operated by Harvard students.
-    <br /> <br />
-    Working on small teams in both the education and marketing agencies, we
-    developed relationships with international businesses (especially in India
-    and China) and iconic brands like Red Bull, Grammarly, and Fjällräven while
-    closing more than $385k in contracts.
+    In my first year of college, I joined Harvard Student Agencies, a
+    club/business managing an umbrella of companies operated by Harvard
+    students.
+    <br /> <br />I worked on small teams in the education and marketing agencies
+    that developed relationships with international businesses (especially in
+    India and China) and iconic brands like Red Bull, Grammarly, and Fjällräven.
+    Over a year, I closed more than $385k in contracts.
   </p>
 );
 
 const PRESS = () => (
   <p>
-    Throughout high school, I worked as a reporting intern at my local news
-    group
+    Throughout high school, I worked as an intern at my local news group.
     <br />
     <br />
     Across three summers, I developed a foundational working skill set, crossed
     one million words written (including school), and grew a deep appreciation
-    for the everyday heroes in my home community. My original portfolio can be
-    found{" "}
+    for the everyday heroes in my community. My portfolio can be found{" "}
     <a href="https://sites.google.com/view/cz-hs-newspaper-archive/home?authuser=0">
       here
     </a>
