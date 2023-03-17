@@ -157,7 +157,7 @@ export interface CoursesItemType {
   key: string;
   title: string;
   tags: ActiveTags[];
-  Description: Function;
+  Description: () => JSX.Element;
   stem: boolean;
 }
 

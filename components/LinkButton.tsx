@@ -2,7 +2,11 @@ import Link from "next/link";
 import React from "react";
 import styles from "../styles/components/LinkButton.module.css";
 
-type customStyleOptions = "socialButton" | "emailButton" | "listButton";
+type customStyleOptions =
+  | "socialButton"
+  | "emailButton"
+  | "listButton"
+  | "invertedButton";
 
 interface InputTypes {
   title: string;
@@ -22,16 +26,20 @@ const getCustomStyle = (customStyle: customStyleOptions) => {
       return styles.emailLink;
     case "listButton":
       return styles.listLink;
+    case "invertedButton":
+      return styles.invertedLink;
   }
 };
 
 const LinkButton = ({ title, customStyle, anchor }: InputTypes) => {
   return (
-    <Link href={anchor}>
-      <a className={[styles.button, getCustomStyle(customStyle)].join(" ")}>
-        <p>{title}</p>
-      </a>
-    </Link>
+    <div className={styles.buttonWrapper}>
+      <Link href={anchor}>
+        <a className={[getCustomStyle(customStyle), styles.button].join(" ")}>
+          <p>{title}</p>
+        </a>
+      </Link>
+    </div>
   );
 };
 

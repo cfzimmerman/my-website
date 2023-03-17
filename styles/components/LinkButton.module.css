@@ -1,3 +1,7 @@
+.buttonWrapper {
+  display: flex;
+}
+
 .button {
   display: flex;
   background-color: var(--color-accent);
@@ -35,4 +39,8 @@
 
 .listLink {
   display: inline-block;
+}
+
+.invertedLink {
+  background-color: var(--color-secondary);
 }

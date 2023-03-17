@@ -1,9 +1,8 @@
 .pageMain {
   min-height: 95vh;
-  margin-right: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
 }
@@ -31,6 +30,17 @@
   padding: var(--size-large-unit) 0;
 }
 
+.navBarWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navBar {
+  width: var(--page-width-landscape);
+  padding: var(--size-large-unit);
+}
+
 @media screen and (orientation: landscape) {
   .allPageContent {
     width: var(--page-width-landscape);
@@ -49,6 +59,9 @@
   }
   .textDispay {
     text-align: left;
+  }
+  .navBarWrapper {
+    padding-left: var(--size-large-unit);
   }
 }
 

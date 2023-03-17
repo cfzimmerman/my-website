@@ -3,9 +3,9 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import React, { Suspense, useState } from "react";
 import AccordionUnit from "../components/AccordionUnit";
-import AccordionWork from "../components/AccordionWork";
 import HomeHeader from "../components/HomeHeader";
 import styles from "../styles/index.module.css";
+import AccordionExperience from "../components/AccordionExperience";
 
 const AccordionCourses = dynamic(
   () => import("../components/AccordionCourses"),
@@ -14,11 +14,11 @@ const AccordionCourses = dynamic(
   }
 );
 
-export type DropDownOptions = "courses" | "work";
+export type DropDownOptions = "courses" | "experience";
 
 export interface DropDownTypes {
   courses: boolean;
-  work: boolean;
+  experience: boolean;
   // projects
   // clubs
 }
@@ -26,7 +26,7 @@ export interface DropDownTypes {
 const Home: NextPage = () => {
   const [dropDown, setDropDown] = useState<DropDownTypes>({
     courses: false,
-    work: false,
+    experience: false,
   });
   const [stemOnlyCourses, setStemOnlyCourses] = useState<boolean>(false);
 
@@ -59,6 +59,14 @@ const Home: NextPage = () => {
       <HomeHeader />
       <div className={styles.mainWrapper}>
         <AccordionUnit
+          isActive={dropDown.experience}
+          category="experience"
+          title="Experience"
+          dropDownAction={dropDownAction}
+        >
+          <AccordionExperience isActive={dropDown.experience} />
+        </AccordionUnit>
+        <AccordionUnit
           isActive={dropDown.courses}
           category={"courses"}
           title="Courses"
@@ -71,14 +79,6 @@ const Home: NextPage = () => {
               setStemOnlyCourses={setStemOnlyCourses}
             />
           </Suspense>
-        </AccordionUnit>
-        <AccordionUnit
-          isActive={dropDown.work}
-          category="work"
-          title="Work"
-          dropDownAction={dropDownAction}
-        >
-          <AccordionWork isActive={dropDown.work} />
         </AccordionUnit>
       </div>
     </main>
