@@ -19,8 +19,6 @@ export type DropDownOptions = "courses" | "experience";
 export interface DropDownTypes {
   courses: boolean;
   experience: boolean;
-  // projects
-  // clubs
 }
 
 const Home: NextPage = () => {

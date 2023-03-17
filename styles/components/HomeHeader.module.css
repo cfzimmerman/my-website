@@ -30,6 +30,7 @@
 .buttonHolder {
   display: flex;
   flex-direction: row;
+  margin: var(--size-standard-unit) 0;
 }
 
 @media screen and (orientation: landscape) {
@@ -75,7 +76,6 @@
   }
 
   .buttonHolder {
-    margin: var(--size-standard-unit) 0;
     flex-wrap: wrap;
     justify-content: center;
   }
