@@ -22,8 +22,12 @@
   margin: var(--size-standard-unit) 0;
 }
 
+.title {
+  margin-bottom: var(--size-small-unit);
+}
+
 .headerSpacer {
-  margin-bottom: var(--size-standard-unit);
+  margin-bottom: var(--size-small-unit);
 }
 
 .navBarWrapper {
@@ -77,7 +81,11 @@
     height: 80vw;
   }
   .headerSpacer {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
   .textDispay {
     text-align: justify;

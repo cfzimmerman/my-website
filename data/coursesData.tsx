@@ -2,25 +2,40 @@ import { ActiveTags } from "../components/Tag";
 
 const CS51 = () => (
   <p>
-    <i>Spring 2023</i> - Planned.
+    <i>Spring 2023</i> - In progress
+    {/*CS 51 was a rigorous and inspiring exploration of
+    genuine software engineering. Structured around five design principles of
+    irredundancy, intentionality, compartmentalization, prevention, and
+    decomposition, the class explored algorithm design and essential data
+    structures through OCaml. */}
   </p>
 );
 
 const ENGSCI150 = () => (
   <p>
-    <i>Spring 2023</i> - Planned.
+    <i>Spring 2023</i> - In progress{" "}
+    {/* ES 150 was an intense introduction to probability and
+    statistics. In the class, we worked with conditional probability, Bayesian
+    statistics, central limit theorems, Markov chains, and parameter
+estimations. */}
   </p>
 );
 
-const PENDING = () => (
+const PHIL18 = () => (
   <p>
-    <i>Spring 2023</i> - Still looking for a great course.
+    <i>Spring 2023</i> - In progress{" "}
+    {/* Combining ethics, history, and philosophy, Phil 18
+    explored great works and ideas from around the world, including ancient
+Egypt, Mesopotamia, India, China, and Greece. */}
   </p>
 );
 
 const CS20 = () => (
   <p>
-    <i>Spring 2023</i> - Planned.
+    <i>Spring 2023</i> - In progress{" "}
+    {/* Taught by Rebecca Nesson (SEAS dean of academic
+    programs), CS 20 covered proof writing, formal reasoning, CS theory, and
+    mathematical foundations for CS in a highly-collaborative environment. */}
   </p>
 );
 
@@ -168,7 +183,8 @@ const coursesData: CoursesItemType[] = [
     tags: [
       "Algorithms",
       "OCaml",
-      "Imperative Programming",
+      "Data Structures",
+      "Design and Abstraction",
       "Functional Programming",
       "Object Oriented Programming",
     ],
@@ -183,16 +199,16 @@ const coursesData: CoursesItemType[] = [
     stem: true,
   },
   {
-    key: "PENDING",
-    title: "PENDING",
+    key: "PHIL18",
+    title: "PHIL 18: Ethics",
     tags: [],
-    Description: PENDING,
+    Description: PHIL18,
     stem: false,
   },
   {
     key: "CS20",
     title: "CS 20: Discrete Mathematics for Computer Science",
-    tags: ["Discrete Math", "Probability", "Graph Theory"],
+    tags: ["Discrete Math", "Probability", "Formal Reasoning", "CS Theory"],
     Description: CS20,
     stem: true,
   },
@@ -265,7 +281,8 @@ const coursesData: CoursesItemType[] = [
       "JavaScript",
       "Flask",
       "Scratch",
-      "Imperative Programming",
+      "Algorithms",
+      "Data Structures",
     ],
     Description: CS50,
     stem: true,

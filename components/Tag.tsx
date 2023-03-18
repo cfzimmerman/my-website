@@ -1,4 +1,5 @@
-import React from "react";
+import { memo } from "react";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import styles from "../styles/components/Tag.module.css";
 
 export type ActiveTags =
@@ -18,25 +19,32 @@ export type ActiveTags =
   | "Graph Theory"
   | "OCaml"
   | "Algorithms"
+  | "Data Structures"
   | "Object Oriented Programming"
-  | "Imperative Programming"
-  | "Functional Programming";
+  | "Functional Programming"
+  | "Design and Abstraction"
+  | "Formal Reasoning"
+  | "CS Theory";
 
 interface InputTypes {
   title: string;
   key: string;
+  link?: string;
 }
 
 const areEqual = (prev: InputTypes, next: InputTypes) => {
   return prev.title === next.title;
 };
 
-const Tag = ({ title }: InputTypes) => {
+const Tag = ({ title, link }: InputTypes) => {
   return (
-    <div className={styles.tagBody}>
-      <p className={styles.tagText}>{title}</p>
-    </div>
+    <a className={styles.tagWrapper} href={link} target="_blank">
+      <div className={styles.tagBody}>
+        <p>{title}</p>
+        {link && <OpenInNewIcon className={styles.linkIcon} />}
+      </div>
+    </a>
   );
 };
 
-export default React.memo(Tag, areEqual);
+export default memo(Tag, areEqual);

@@ -5,13 +5,19 @@ import React, { Suspense, useState } from "react";
 import AccordionUnit from "../components/AccordionUnit";
 import HomeHeader from "../components/HomeHeader";
 import styles from "../styles/index.module.css";
-import AccordionExperience from "../components/AccordionExperience";
 import { useMediaQuery } from "@mui/material";
 
 const AccordionCourses = dynamic(
   () => import("../components/AccordionCourses"),
   {
-    suspense: true,
+    loading: () => <p>Loading</p>,
+  }
+);
+
+const AccordionExperience = dynamic(
+  () => import("../components/AccordionExperience"),
+  {
+    loading: () => <p>Loading</p>,
   }
 );
 
@@ -72,13 +78,11 @@ const Home: NextPage = () => {
           title="Courses"
           dropDownAction={dropDownAction}
         >
-          <Suspense fallback={"Loading"}>
-            <AccordionCourses
-              isActive={dropDown.courses}
-              stemOnlyCourses={stemOnlyCourses}
-              setStemOnlyCourses={setStemOnlyCourses}
-            />
-          </Suspense>
+          <AccordionCourses
+            isActive={dropDown.courses}
+            stemOnlyCourses={stemOnlyCourses}
+            setStemOnlyCourses={setStemOnlyCourses}
+          />
         </AccordionUnit>
       </div>
     </main>

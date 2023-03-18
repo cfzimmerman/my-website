@@ -23,7 +23,10 @@ const AccordionUnit = ({
   return (
     <div className={styles.widthConstraint}>
       <section className={styles.accordion}>
-        <menu className={styles.dropDown}>
+        <menu
+          className={styles.dropDown}
+          onClick={() => dropDownAction(category)}
+        >
           <h3 className={styles.header}>{title}</h3>
           <RotatingButton
             active={isActive}

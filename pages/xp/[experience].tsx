@@ -2,6 +2,7 @@ import styles from "../../styles/experience.module.css";
 import Image from "next/image";
 import LinkButton from "../../components/LinkButton";
 import { experienceData, experiencePaths } from "../../data/experienceData";
+import Tag from "../../components/Tag";
 
 export async function getStaticPaths() {
   return {
@@ -28,7 +29,8 @@ export async function getStaticProps(context: any) {
 }
 
 const WorkExperience = ({ xp }: { xp: string }) => {
-  const { title, imageURL, Description } = experienceData[xp];
+  const { title, imageURL, Description, externalLink, linkTitle } =
+    experienceData[xp];
   return (
     <>
       <header className={styles.navBarWrapper}>
@@ -40,18 +42,26 @@ const WorkExperience = ({ xp }: { xp: string }) => {
         <section className={styles.allPageContent}>
           <div className={styles.pageItem}>
             <div className={styles.imageWrapper}>
-              <Image
-                src={imageURL}
-                layout="fill"
-                objectFit="contain"
-                className={styles.mainImage}
-                alt={title}
-              />
+              <a>
+                <Image
+                  src={imageURL}
+                  layout="fill"
+                  objectFit="contain"
+                  className={styles.mainImage}
+                  alt={title}
+                />
+              </a>
             </div>
           </div>
           <article className={styles.pageItem}>
             <div className={styles.textDispay}>
-              <h3 className={styles.headerSpacer}>{title}</h3>
+              <div className={styles.headerSpacer}>
+                <h3 className={styles.title}>{title}</h3>
+                {externalLink && linkTitle && (
+                  <Tag key={title} title={linkTitle} link={externalLink} />
+                )}
+              </div>
+
               <Description />
             </div>
           </article>

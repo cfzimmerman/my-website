@@ -1,11 +1,20 @@
+.tagWrapper {
+  display: flex;
+  color: var(--color-primary);
+}
+
 .tagBody {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background-color: var(--color-secondary-muted);
   border-radius: var(--size-small-unit);
+  padding: var(--size-xs-unit) var(--size-small-unit);
   margin-right: var(--size-small-unit);
   margin-bottom: var(--size-small-unit);
 }
 
-.tagText {
-  color: var(--color-primary);
-  padding: var(--size-xs-unit);
+.linkIcon {
+  padding-left: var(--size-xs-unit);
+  font-size: 1.5em;
 }
