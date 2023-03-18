@@ -49,7 +49,7 @@ const Home: NextPage = () => {
         <title>Cory Zimmerman</title>
         <meta
           name="description"
-          content="Isn't that shark emoji cool ^ (it's my favorite)"
+          content="My personal website: GitHub, LinkedIn, and a preview of my classes and professional experiences."
         />
         <meta property="og:title" content="Cory Zimmerman" />
         <meta
