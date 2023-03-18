@@ -58,7 +58,7 @@ const Home: NextPage = () => {
         />
         <meta
           property="og:image"
-          content="https://drive.google.com/uc?id=18VUN7h7leKfOM9q64lMATxPdwwPY2FIO"
+          content="https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/ogImage.png"
         />
         <meta name="author" content="Cory Zimmerman" />
       </Head>
