@@ -3,6 +3,7 @@ import Image from "next/image";
 import LinkButton from "../../components/LinkButton";
 import { experienceData, experiencePaths } from "../../data/experienceData";
 import Tag from "../../components/Tag";
+import Head from "next/head";
 
 export async function getStaticPaths() {
   return {
@@ -29,10 +30,16 @@ export async function getStaticProps(context: any) {
 }
 
 const WorkExperience = ({ xp }: { xp: string }) => {
-  const { title, imageURL, Description, externalLink, linkTitle } =
+  const { title, brief, imageURL, Description, externalLink, linkTitle } =
     experienceData[xp];
   return (
     <>
+      <Head>
+        <title>{title + " • Cory Zimmerman"}</title>
+        <meta property="og:title" content={title + " • Cory Zimmerman"} />
+        <meta property="og:description" content={brief} />
+        <meta property="og:image" content={imageURL} />
+      </Head>
       <header className={styles.navBarWrapper}>
         <section className={styles.navBar}>
           <LinkButton title="Go back" customStyle="invertedButton" anchor="/" />

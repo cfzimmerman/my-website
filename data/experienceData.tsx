@@ -1,3 +1,17 @@
+const STARTUPVERSE = () => (
+  <p>
+    Some friends with an ML company hired me to build a semantic search app.
+    They collected, cleaned, and processed the data and gave me a CSV and some
+    designs. I created a modular infrastructure for vector storage, generation,
+    and search on an object-oriented backend server. Then, I built an SSR
+    frontend with Next and set up HTTP I/O handlers for serving queries.
+    <br /> <br />
+    The site is live at{" "}
+    <a href="https://www.startupverse.fyi">startupverse.fyi</a>, and we've
+    served more than 🌺 queries since release!
+  </p>
+);
+
 const SOLESCA = () => (
   <p>
     <a href="https://solesca.com/">Solesca</a> sells software that helps solar
@@ -13,8 +27,8 @@ const IMGFILTER = () => (
   <p>
     I wanted to learn C++, so I made a basic image filter. While the code itself
     is fairly elementary, this project was a great introduction to C++, Object
-    Oriented Programming, and some common data structures. The project's GitHub
-    repo has some cool examples in the{" "}
+    Oriented Programming, and some common data structures. The GitHub repo has
+    some cool examples in the{" "}
     <a href="https://github.com/cfzimmerman/Simple-CPP-Image-Filter/tree/main/output">
       /output
     </a>{" "}
@@ -76,11 +90,24 @@ export interface ExperienceDataType {
 }
 
 export const experienceData: Record<string, ExperienceDataType> = {
+  /*
+  startupverse: {
+    emoji: "🔍",
+    title: "startupverse.fyi",
+    brief:
+      "[Project, contract] Over spring break, I made a semantic search app for startups." */ /* As of March 2023, it's served more than 100 user searches */ /*,
+    route: "/xp/startupverse",
+    imageURL: "",
+    externalLink: "https://www.startupverse.fyi",
+    linkTitle: "Live site",
+    Description: STARTUPVERSE,
+  },
+  */
   solesca: {
     emoji: "☀️",
     title: "Solesca",
     brief:
-      "[Ongoing, internship] As a Full Stack SWE Intern, I'm building real-time collaborative design tools for solar developers.",
+      "[Ongoing, internship] As a Full Stack SWE Intern, I'm building collaborative real-time design tools for solar developers.",
     route: `/xp/solesca`,
     imageURL:
       "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/solesca.JPG",
@@ -95,7 +122,7 @@ export const experienceData: Record<string, ExperienceDataType> = {
     externalLink: "https://github.com/cfzimmerman/Simple-CPP-Image-Filter",
     linkTitle: "GitHub repo",
     imageURL:
-      "https://raw.githubusercontent.com/cfzimmerman/Simple-CPP-Image-Filter/main/output/filtered-img3.jpeg",
+      "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/imgFilter.jpeg",
     Description: IMGFILTER,
   },
   render: {

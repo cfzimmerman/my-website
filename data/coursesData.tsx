@@ -3,11 +3,14 @@ import { ActiveTags } from "../components/Tag";
 const CS51 = () => (
   <p>
     <i>Spring 2023</i> - In progress
-    {/*CS 51 was a rigorous and inspiring exploration of
-    genuine software engineering. Structured around five design principles of
-    irredundancy, intentionality, compartmentalization, prevention, and
-    decomposition, the class explored algorithm design and essential data
-    structures through OCaml. */}
+    {/* CS 51 was a rigorous and inspiring
+    exploration of genuine software engineering. Structured around five design
+    principles of irredundancy, intentionality, compartmentalization,
+    prevention, and decomposition, the class explored algorithm design and
+    essential data structures through OCaml. Check out the{" "}
+    <a href="https://cs51.io/">class site</a> and{" "}
+    <a href="https://github.com/cfzimmerman">my CS 51 GitHub repo</a>.
+  */}
   </p>
 );
 
@@ -17,7 +20,7 @@ const ENGSCI150 = () => (
     {/* ES 150 was an intense introduction to probability and
     statistics. In the class, we worked with conditional probability, Bayesian
     statistics, central limit theorems, Markov chains, and parameter
-estimations. */}
+    estimations. */}
   </p>
 );
 
@@ -123,9 +126,9 @@ const ECON10B = () => (
 
 const CS50 = () => (
   <p>
-    <i>Fall 2020</i> - CS50 was my first computer science class. Coursework
-    focused primarily on building a strong CS foundation in a broad sample of
-    skill areas. Check out the{" "}
+    <i>Fall 2020</i> - CS 50 was my first computer science class. Coursework
+    focused on building a strong CS foundation in a broad sample of skill areas.
+    Check out the{" "}
     <a href="https://cs50.harvard.edu/college/2020/fall/">course website</a> and
     my class <a href="https://github.com/cfzimmerman/20F-CS50">GitHub repo</a>{" "}
     for more info.

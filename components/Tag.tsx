@@ -38,7 +38,12 @@ const areEqual = (prev: InputTypes, next: InputTypes) => {
 
 const Tag = ({ title, link }: InputTypes) => {
   return (
-    <a className={styles.tagWrapper} href={link} target="_blank">
+    <a
+      className={styles.tagWrapper}
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+    >
       <div className={styles.tagBody}>
         <p>{title}</p>
         {link && <OpenInNewIcon className={styles.linkIcon} />}
