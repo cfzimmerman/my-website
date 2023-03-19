@@ -30,7 +30,7 @@ export async function getStaticProps(context: any) {
 }
 
 const WorkExperience = ({ xp }: { xp: string }) => {
-  const { title, brief, imageURL, Description, externalLink, linkTitle } =
+  const { title, imageURL, Description, externalLink, linkTitle } =
     experienceData[xp];
   return (
     <>

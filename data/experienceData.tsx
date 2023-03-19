@@ -129,7 +129,7 @@ export const experienceData: Record<string, ExperienceDataType> = {
     emoji: "📱",
     title: "Render",
     brief:
-      "[Project, job] Over a gap year, I designed and built a full stack application enabling inter-platform photo and video management.",
+      "[Project, startup] Over a gap year, I designed and built a full stack mobile app for digital content management.",
     route: "/xp/render",
     externalLink: "https://youtu.be/fp9qIQecDdw",
     linkTitle: "Demo",
