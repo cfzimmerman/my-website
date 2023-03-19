@@ -25,8 +25,8 @@ const HomeHeader = () => {
         <h2>{`Hey! I'm Cory.`}</h2>
         <div className={styles.lineDivider} />
         <p>
-          I study computer science at Harvard, and I get excited excited about
-          building elegant, modular, and efficient software.
+          I study computer science at Harvard, and I get excited about building
+          software that's elegant, modular, useful, efficient, and beautiful.
         </p>
         <div className={styles.buttonHolder}>
           <LinkButton
