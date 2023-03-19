@@ -107,7 +107,7 @@ export const experienceData: Record<string, ExperienceDataType> = {
     emoji: "☀️",
     title: "Solesca",
     brief:
-      "[Ongoing, internship] As a Full Stack SWE Intern, I'm building collaborative real-time design tools for solar developers.",
+      "[Ongoing, internship] As a Full Stack SWE Intern, I'm building real-time data infrastructure for a collaborative design tool.",
     route: `/xp/solesca`,
     imageURL:
       "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/solesca.JPG",

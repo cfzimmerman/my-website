@@ -37,7 +37,6 @@ const WorkExperience = ({ xp }: { xp: string }) => {
       <Head>
         <title>{title + " • Cory Zimmerman"}</title>
         <meta property="og:title" content={title + " • Cory Zimmerman"} />
-        <meta property="og:description" content={brief} />
         <meta property="og:image" content={imageURL} />
       </Head>
       <header className={styles.navBarWrapper}>
