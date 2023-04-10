@@ -8,7 +8,7 @@ const STARTUPVERSE = () => (
     upload script for parsing, type-checking, and adding new search data. Then,
     I designed a REST API on an object-oriented backend, added tests, and
     deployed it on Heroku. Finally, I built an SSR frontend with Next and set up
-    HTTP I/O handlers for predictably serving user queries.
+    client-side HTTP I/O handlers to serve user queries.
     <br /> <br />
     The site is live at{" "}
     <a href="https://www.startupverse.fyi">startupverse.fyi</a>.
