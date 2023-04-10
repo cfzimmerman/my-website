@@ -7,8 +7,8 @@ const STARTUPVERSE = () => (
     I created a modular infrastructure for vector management with an upload
     script for parsing, type-checking, and uploading search results. Then, I
     designed a REST API on an object-oriented backend, added tests, and deployed
-    it on Heroku. Finally, I built an SSR frontend with Next and set up outbound
-    HTTP I/O handlers for predictably serving user queries.
+    it on Heroku. Finally, I built an SSR frontend with Next and set up HTTP I/O
+    handlers for predictably serving user queries.
     <br /> <br />
     The site is live at{" "}
     <a href="https://www.startupverse.fyi">startupverse.fyi</a>.
@@ -102,7 +102,7 @@ export const experienceData: Record<string, ExperienceDataType> = {
       "[Project, contract] Over spring break, I made a semantic search app for startups." /* As of March 2023, it's served more than 100 user searches */,
     route: "/xp/startupverse",
     imageURL:
-      "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/startupverse.png",
+      "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/startupverse.jpeg",
     externalLink: "https://www.startupverse.fyi",
     linkTitle: "Live site",
     Description: STARTUPVERSE,
