@@ -4,11 +4,11 @@ const STARTUPVERSE = () => (
     They collected, cleaned, and processed the searchable data and gave me a CSV
     with some designs.
     <br /> <br />
-    I created a modular infrastructure for vector management with an upload
-    script for parsing, type-checking, and uploading search results. Then, I
-    designed a REST API on an object-oriented backend, added tests, and deployed
-    it on Heroku. Finally, I built an SSR frontend with Next and set up HTTP I/O
-    handlers for predictably serving user queries.
+    First, I created a modular infrastructure for vector management with an
+    upload script for parsing, type-checking, and adding new search data. Then,
+    I designed a REST API on an object-oriented backend, added tests, and
+    deployed it on Heroku. Finally, I built an SSR frontend with Next and set up
+    HTTP I/O handlers for predictably serving user queries.
     <br /> <br />
     The site is live at{" "}
     <a href="https://www.startupverse.fyi">startupverse.fyi</a>.
