@@ -28,6 +28,20 @@ const SOLESCA = () => (
   </p>
 );
 
+const MBIMPORTER = () => (
+  <p>
+    I use a great app called Manabox to manage my Magic: The Gathering cards. I
+    ran into an issue importing a deck list from my collection and wrote an
+    OCaml script to get around it.
+    <br /> <br />
+    The whole project, idea to completion, took a couple of hours, and {
+      "it's"
+    }{" "}
+    been super useful since then. More details and source code in the GitHub
+    repo linked above.
+  </p>
+);
+
 const IMGFILTER = () => (
   <p>
     I wanted to learn C++, so I made a basic image filter. While the code itself
@@ -116,6 +130,18 @@ export const experienceData: Record<string, ExperienceDataType> = {
     imageURL:
       "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/solesca.JPG",
     Description: SOLESCA,
+  },
+  mbImporter: {
+    emoji: "🎴",
+    title: "Manabox Importer",
+    brief:
+      "[Project] I wrote an OCaml data processing script to extend the functionality of an app I like.",
+    route: "/xp/mbImporter",
+    imageURL:
+      "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/mbImporter.jpg",
+    externalLink: "https://github.com/cfzimmerman/manabox-collection-to-deck",
+    linkTitle: "GitHub",
+    Description: MBIMPORTER,
   },
   imgFilter: {
     emoji: "🌌",
