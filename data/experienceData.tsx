@@ -4,22 +4,21 @@ const STARTUPVERSE = () => (
     They collected, cleaned, and processed the searchable data and gave me a CSV
     with some designs.
     <br /> <br />
-    First, I created a modular infrastructure for vector management with an
-    upload script for parsing, type-checking, and adding new search data. Then,
-    I designed a REST API on an object-oriented backend, added tests, and
-    deployed it on Heroku. Finally, I built an SSR frontend with Next and set up
-    client-side HTTP I/O handlers to serve user queries.
+    My job was to turn that into a product. I started by writing a modular toolkit 
+    for vector management with an upload script for parsing, type-checking, and 
+    adding new search data. Then I built a REST API, added tests, and
+    deployed it on Heroku. Finally, I made an SSR frontend with Next and set up
+    client-side I/O handlers to serve user queries.
     <br /> <br />
     The site is live at{" "}
     <a href="https://www.startupverse.fyi">startupverse.fyi</a>.
-    {/* {" "}, and we've
-    served more than 🌺 queries since release! */}
+    {" "}, and we've served more than 1,000 queries since release!
   </p>
 );
 
 const SOLESCA = () => (
   <p>
-    <a href="https://solesca.com/">Solesca</a> sells software that helps solar
+    <a href="https://solesca.com/">Solesca</a> sells software to help solar
     developers design projects (similar to Figma). I'm building infrastructure
     enabling multi-user real-time collaboration at scale.
     <br /> <br />
@@ -113,7 +112,7 @@ export const experienceData: Record<string, ExperienceDataType> = {
     emoji: "🔍",
     title: "Startupverse",
     brief:
-      "[Project, contract] Over spring break, I made a semantic search app for startups." /* As of March 2023, it's served more than 100 user searches */,
+      "[Project, contract] Over spring break, I made a semantic search app for startups.",
     route: "/xp/startupverse",
     imageURL:
       "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/startupverse.jpeg",
@@ -125,7 +124,7 @@ export const experienceData: Record<string, ExperienceDataType> = {
     emoji: "☀️",
     title: "Solesca",
     brief:
-      "[Ongoing, internship] As a Full Stack SWE Intern, I'm building real-time data infrastructure for a collaborative design tool.",
+      "[Ongoing, internship] As a Full Stack SWE, I'm building real-time data infrastructure for a collaborative design tool.",
     route: `/xp/solesca`,
     imageURL:
       "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/solesca.JPG",
