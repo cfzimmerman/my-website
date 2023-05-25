@@ -11,8 +11,8 @@ const STARTUPVERSE = () => (
     client-side I/O handlers to serve user queries.
     <br /> <br />
     The site is live at{" "}
-    <a href="https://www.startupverse.fyi">startupverse.fyi</a>.
-    {" "}, and we've served more than 1,000 queries since release!
+    <a href="https://www.startupverse.fyi">startupverse.fyi</a>
+    {", "}and we've served more than 1,000 queries since release!
   </p>
 );
 
