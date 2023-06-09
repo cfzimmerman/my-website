@@ -16,9 +16,9 @@ const NEOVIM = () => (
     but I love it now.
     <br /> <br />
     Working in the CLI has pushed me to explore Unix, optimize my workflow, and
-    discover what my computer truly really capable of.
+    discover what my computer really capable of.
     <br /> <br />
-    My often-updated config can be found at the GitHub link above.
+    My most recent config can be found at the GitHub link above.
   </p>
 );
 

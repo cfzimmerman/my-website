@@ -1,10 +1,22 @@
 import { ActiveTags } from "../components/Tag";
 
-const CS61 = () => <p>Fall 2023</p>;
+const CS61 = () => (
+  <p>
+    <i>Fall 2023</i>
+  </p>
+);
 
-const CS120 = () => <p>Fall 2023</p>;
+const CS120 = () => (
+  <p>
+    <i>Fall 2023</i>
+  </p>
+);
 
-const AM22A = () => <p>Fall 2023</p>;
+const AM22A = () => (
+  <p>
+    <i>Fall 2023</i>
+  </p>
+);
 
 const PENDING = () => (
   <p>
