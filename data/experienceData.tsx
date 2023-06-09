@@ -1,8 +1,7 @@
 const MINIML = () => (
   <p>
-    As a CS 51 final project, I built an interpreter and REPL in OCaml. Valid
-    OCaml expressions are read in, parsed into a meta language, evaluated, and
-    printed.
+    MiniML is an interpreter and REPL written in OCaml. Valid OCaml expressions
+    are read in, parsed into a meta language, evaluated, and returned.
     <br />
     <br />
     Most of the project was spent building and abstracting different semantic
