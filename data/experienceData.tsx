@@ -1,10 +1,12 @@
 const MINIML = () => (
   <p>
-    Concluding four months of daily OCaml development in CS 51, I built an
-    interpreter and REPL for a tiny ML-style language in OCaml. <br />
+    As a CS 51 final project, I built an interpreter and REPL in OCaml. Valid
+    OCaml expressions are read in, parsed into a meta language, evaluated, and
+    printed.
+    <br />
     <br />
     Most of the project was spent building and abstracting different semantic
-    evaluators. Checkout the demo video and readme on GitHub!
+    evaluators. Checkout the demo video and readme on GitHub for more info!
   </p>
 );
 
@@ -160,7 +162,8 @@ export const experienceData: Record<string, ExperienceDataType> = {
     title: "MiniML",
     brief: "[Project] I built a mini language interpreter and REPL in OCaml.",
     route: `/xp/miniml`,
-    imageURL: "",
+    imageURL:
+      "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/miniml.jpeg",
     Description: MINIML,
     linkTitle: "GitHub",
     externalLink: "https://github.com/cfzimmerman/miniml",
@@ -170,7 +173,8 @@ export const experienceData: Record<string, ExperienceDataType> = {
     title: "Neovim",
     brief: "[Project, ongoing] I set up an editor that's truly my own.",
     route: `/xp/neovim`,
-    imageURL: "",
+    imageURL:
+      "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/nvim.png",
     linkTitle: "GitHub",
     externalLink: "https://github.com/cfzimmerman/neovim-config",
     Description: NEOVIM,
@@ -182,7 +186,8 @@ export const experienceData: Record<string, ExperienceDataType> = {
       "[Projects] I built a CLI tool, multithreaded server, and other mini \
     projects while learning Rust.",
     route: `/xp/trpl`,
-    imageURL: "",
+    imageURL:
+      "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/multithreaded_server.jpeg",
     Description: TRPL,
   },
   startupverse: {
