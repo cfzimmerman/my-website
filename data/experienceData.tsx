@@ -1,18 +1,54 @@
+const MINIML = () => (
+  <p>
+    Concluding four months of daily OCaml development in CS 51, I built an
+    interpreter and REPL for a tiny ML-style language in OCaml. <br />
+    <br />
+    Most of the project was spent building and abstracting different semantic
+    evaluators. Checkout the demo video and readme on GitHub!
+  </p>
+);
+
+const NEOVIM = () => (
+  <p>
+    I switched from VS Code to Neovim in 2023. It took a while to familiarize,
+    but I love it now.
+    <br /> <br />
+    Working in the CLI has pushed me to explore Unix, optimize my workflow, and
+    discover what my computer truly really capable of.
+    <br /> <br />
+    My often-updated config can be found at the GitHub link above.
+  </p>
+);
+
+const TRPL = () => (
+  <p>
+    I started learning Rust with “The Rust Programming Language” book and built
+    a <a href="https://github.com/cfzimmerman/minigrep">mini-grep CLI tool</a>,{" "}
+    <a href="https://github.com/cfzimmerman/multithreaded-server">
+      {" "}
+      multithreaded server
+    </a>
+    , and some other{" "}
+    <a href="https://github.com/cfzimmerman/trpl">small crates</a> in the
+    process. The experience was incredible, and I’m looking forward to many more
+    Rust projects to come.
+  </p>
+);
+
 const STARTUPVERSE = () => (
   <p>
     Some friends with an ML company hired me to build a semantic search app.
     They collected, cleaned, and processed the searchable data and gave me a CSV
     with some designs.
     <br /> <br />
-    My job was to turn that into a product. I started by writing a modular toolkit 
-    for vector management with an upload script for parsing, type-checking, and 
-    adding new search data. Then I built a REST API, added tests, and
-    deployed it on Heroku. Finally, I made an SSR frontend with Next and set up
-    client-side I/O handlers to serve user queries.
+    I turned that into a product! Doing so involved setting up modular
+    infrastructure for vector management, building unit-tested libraries for
+    processing queries, and setting up a REST API to handle requests. I also
+    built an SSR frontend with Next, set up a client-side library to handle I/O,
+    and deployed the service on Heroku.
     <br /> <br />
     The site is live at{" "}
-    <a href="https://www.startupverse.fyi">startupverse.fyi</a>
-    {", "}and we've served more than 1,000 queries since release!
+    <a href="https://www.startupverse.fyi">startupverse.fyi</a>.
   </p>
 );
 
@@ -23,15 +59,15 @@ const SOLESCA = () => (
     enabling multi-user real-time collaboration at scale.
     <br /> <br />
     In the role, {"I've"} enjoyed the opportunity to tackle architecture design
-    challenges while building a do-anything SWE skill set.
+    challenges while growing a do-anything SWE skill set.
   </p>
 );
 
 const MBIMPORTER = () => (
   <p>
-    I use a great app called Manabox to manage my Magic: The Gathering cards. I
-    ran into an issue importing a deck list from my collection and wrote an
-    OCaml script to get around it.
+    I use an app called Manabox to manage my Magic: The Gathering cards. I ran
+    into an issue importing a deck list from my collection and wrote an OCaml
+    script to get around it.
     <br /> <br />
     The whole project, idea to completion, took a couple of hours, and {
       "it's"
@@ -108,6 +144,47 @@ export interface ExperienceDataType {
 }
 
 export const experienceData: Record<string, ExperienceDataType> = {
+  solesca: {
+    emoji: "☀️",
+    title: "Solesca",
+    brief:
+      "[Ongoing, internship] As a Full Stack SWE Intern, I'm building real-time \
+        data infrastructure for a collaborative design tool.",
+    route: `/xp/solesca`,
+    imageURL:
+      "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/solesca.JPG",
+    Description: SOLESCA,
+  },
+  miniml: {
+    emoji: "🐫",
+    title: "MiniML",
+    brief: "[Project] I built a mini language interpreter and REPL in OCaml.",
+    route: `/xp/miniml`,
+    imageURL: "",
+    Description: MINIML,
+    linkTitle: "GitHub",
+    externalLink: "https://github.com/cfzimmerman/miniml",
+  },
+  neovim: {
+    emoji: "⌨️ ",
+    title: "Neovim",
+    brief: "[Project, ongoing] I set up an editor that's truly my own.",
+    route: `/xp/neovim`,
+    imageURL: "",
+    linkTitle: "GitHub",
+    externalLink: "https://github.com/cfzimmerman/neovim-config",
+    Description: NEOVIM,
+  },
+  trpl: {
+    emoji: "🦀",
+    title: "Learning Rust",
+    brief:
+      "[Projects] I built a CLI tool, multithreaded server, and other mini \
+    projects while learning Rust.",
+    route: `/xp/trpl`,
+    imageURL: "",
+    Description: TRPL,
+  },
   startupverse: {
     emoji: "🔍",
     title: "Startupverse",
@@ -119,16 +196,6 @@ export const experienceData: Record<string, ExperienceDataType> = {
     externalLink: "https://www.startupverse.fyi",
     linkTitle: "Live site",
     Description: STARTUPVERSE,
-  },
-  solesca: {
-    emoji: "☀️",
-    title: "Solesca",
-    brief:
-      "[Ongoing, internship] As a Full Stack SWE, I'm building real-time data infrastructure for a collaborative design tool.",
-    route: `/xp/solesca`,
-    imageURL:
-      "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/solesca.JPG",
-    Description: SOLESCA,
   },
   mbImporter: {
     emoji: "🎴",

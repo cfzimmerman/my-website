@@ -1,44 +1,47 @@
 import { ActiveTags } from "../components/Tag";
 
+const CS61 = () => <p>Fall 2023</p>;
+
+const CS120 = () => <p>Fall 2023</p>;
+
+const AM22A = () => <p>Fall 2023</p>;
+
+const PENDING = () => (
+  <p>
+    <i>Fall 2023</i> - Still looking for a great course.
+  </p>
+);
+
 const CS51 = () => (
   <p>
-    <i>Spring 2023</i> - In progress
-    {/* CS 51 was a rigorous and inspiring
-    exploration of genuine software engineering. Structured around five design
-    principles of irredundancy, intentionality, compartmentalization,
-    prevention, and decomposition, the class explored algorithm design and
-    essential data structures through OCaml. Check out the{" "}
-    <a href="https://cs51.io/">class site</a> and{" "}
-    <a href="https://github.com/cfzimmerman">my CS 51 GitHub repo</a>.
-  */}
+    <i>Spring 2023</i> - Structured around five design principles (irredundancy,
+    intentionality, compartmentalization, prevention, and decomposition), CS 51
+    explored algorithm design and essential data structures in OCaml. Check out
+    the <a href="https://cs51.io/">class site</a> for more info.
   </p>
 );
 
 const ENGSCI150 = () => (
   <p>
-    <i>Spring 2023</i> - In progress{" "}
-    {/* ES 150 was an intense introduction to probability and
-    statistics. In the class, we worked with conditional probability, Bayesian
-    statistics, central limit theorems, Markov chains, and parameter
-    estimations. */}
+    <i>Spring 2023</i> - ES 150 was an intense introduction to probability and
+    statistics. In the class, we worked with conditional probability,
+    probability distributions, hypothesis testing, and Markov chains.
   </p>
 );
 
 const PHIL18 = () => (
   <p>
-    <i>Spring 2023</i> - In progress{" "}
-    {/* Combining ethics, history, and philosophy, Phil 18
+    <i>Spring 2023</i> - Combining ethics, history, and philosophy, Phil 18
     explored great works and ideas from around the world, including ancient
-Egypt, Mesopotamia, India, China, and Greece. */}
+    Egypt, Mesopotamia, India, China, and Greece.
   </p>
 );
 
 const CS20 = () => (
   <p>
-    <i>Spring 2023</i> - In progress{" "}
-    {/* Taught by Rebecca Nesson (SEAS dean of academic
-    programs), CS 20 covered proof writing, formal reasoning, CS theory, and
-    mathematical foundations for CS in a highly-collaborative environment. */}
+    <i>Spring 2023</i> - Taught by Rebecca Nesson (SEAS dean of academics), CS
+    20 covered proof writing, formal reasoning, CS theory, and mathematical
+    foundations for CS in a highly-collaborative environment.
   </p>
 );
 
@@ -179,7 +182,36 @@ export interface CoursesItemType {
   stem: boolean;
 }
 
+// CS 61, CS 120, AM 22A, Pending
 const coursesData: CoursesItemType[] = [
+  {
+    key: "CS61",
+    title: "CS 61: Systems Programming and Machine Organization",
+    tags: ["Systems Programming"],
+    Description: CS61,
+    stem: true,
+  },
+  {
+    key: "CS120",
+    title: "CS 120: Intro to Algorithms and their Limitations",
+    tags: ["Algorithms", "Design and Abstraction", "CS Theory"],
+    Description: CS120,
+    stem: true,
+  },
+  {
+    key: "AM22A",
+    title: "AM 22A: Solving and Optimizing",
+    tags: ["Linear Algebra", "Multivariate Calculus", "Algorithms"],
+    Description: AM22A,
+    stem: true,
+  },
+  {
+    key: "PENDING",
+    title: "Pending",
+    tags: [],
+    Description: PENDING,
+    stem: false,
+  },
   {
     key: "CS51",
     title: "CS 51: Abstraction and Design in Computation",
