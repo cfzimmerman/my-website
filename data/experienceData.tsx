@@ -174,7 +174,7 @@ export const experienceData: Record<string, ExperienceDataType> = {
     brief: "[Project, ongoing] I set up an editor that's truly my own.",
     route: `/xp/neovim`,
     imageURL:
-      "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/nvim.png",
+      "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/nvim.jpeg",
     linkTitle: "GitHub",
     externalLink: "https://github.com/cfzimmerman/neovim-config",
     Description: NEOVIM,
