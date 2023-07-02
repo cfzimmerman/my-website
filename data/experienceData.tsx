@@ -170,7 +170,8 @@ export const experienceData: Record<string, ExperienceDataType> = {
     brief: "[Project] I wrote a multithreaded WebSocket library in Rust.",
     route: "/xp/myws",
     Description: MYWS,
-    imageURL: "",
+    imageURL:
+      "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/myWs.png",
     linkTitle: "GitHub",
     externalLink: "https://github.com/cfzimmerman/my-ws/tree/main",
   },
