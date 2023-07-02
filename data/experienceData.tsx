@@ -1,3 +1,11 @@
+const MYWS = () => (
+  <p>
+    My Ws is a client and server WebSocket library I wrote in Rust. Usage is
+    oriented around paths and events, similar to Socket.io in JS. Check out the
+    source code and example app on GitHub for more info.
+  </p>
+);
+
 const MINIML = () => (
   <p>
     MiniML is an interpreter and REPL written in OCaml. Valid OCaml expressions
@@ -155,6 +163,16 @@ export const experienceData: Record<string, ExperienceDataType> = {
     imageURL:
       "https://raw.githubusercontent.com/cfzimmerman/my-website/main/files/solesca.JPG",
     Description: SOLESCA,
+  },
+  myws: {
+    emoji: "🔌",
+    title: "My Ws",
+    brief: "[Project] I wrote a multithreaded WebSocket library in Rust.",
+    route: "/xp/myws",
+    Description: MYWS,
+    imageURL: "",
+    linkTitle: "GitHub",
+    externalLink: "https://github.com/cfzimmerman/my-ws/tree/main",
   },
   miniml: {
     emoji: "🐫",
