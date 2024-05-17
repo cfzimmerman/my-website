@@ -1,2 +1,3 @@
 # my-website
-My personal website! Check it out at [cfzimmerman.com](https://www.cfzimmerman.com/).
+
+This was my old personal website, now replaced with the much simpler page at [cfzimmerman.com](https://www.cfzimmerman.com/).
